@@ -1,0 +1,26 @@
+<h1>Add/Edit Contact</h1>
+
+<form role="form" name="contactForm" id="contactForm" novalidate ng-submit="contactForm.$valid && saveContact()">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required ng-model="contact.firstName" class="form-control">
+        <div ng-show="contactForm.$submitted || contactForm.firstname.$touched">
+            <div ng-show="contactForm.firstName.$error.required" class="alert alert-danger">Firstname is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required ng-model="contact.lastName" class="form-control">
+        <div ng-show="contactForm.$submitted || contactForm.lastName.$touched">
+            <div ng-show="contactForm.lastName.$error.required" class="alert alert-danger">Lastname is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" ng-model="contact.company" class="form-control" required>
+        <div ng-show="contactForm.$submitted || contactForm.company.$touched">
+            <div class="alert alert-danger" ng-show="contactForm.company.$error.required">Company is required</div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>    

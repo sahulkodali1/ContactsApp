@@ -1,0 +1,1 @@
+var contactsApp = angular.module("contactsApp",["ngRoute","ngResource","ui.grid","ui.grid.selection","ui.grid.exporter"]);
